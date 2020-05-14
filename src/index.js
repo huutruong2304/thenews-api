@@ -2,7 +2,19 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const bodyParser = require('body-parser')
-require('dotenv').config({ path: 'src/config/dev.env' })
+const axios = require('axios').default;
+
+
+
+
+if (process.env.HOST_URL) {
+    setInterval(() => {
+        axios.get(process.env.HOST_URL)
+    }, 60 * 1000 * 5 - 200)
+} else {
+    require('dotenv').config({ path: 'src/config/dev.env' })
+}
+
 
 
 const { homeController } = require('./home/index');
