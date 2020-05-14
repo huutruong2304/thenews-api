@@ -19,6 +19,7 @@
         "hbs": "^4.1.1",
         "moment": "^2.25.3",
         "mongoose": "^5.9.6",
+        "node-cache": "^5.1.0",
         "validator": "^13.0.0"
     },
     "devDependencies": {

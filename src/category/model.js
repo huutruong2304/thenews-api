@@ -25,6 +25,8 @@ const schema = new mongoose.Schema({
     timestamps: true
 });
 
+schema.methods.toJSON = function() {}
+
 const Category = mongoose.model('Category', schema);
 
 module.exports = {
